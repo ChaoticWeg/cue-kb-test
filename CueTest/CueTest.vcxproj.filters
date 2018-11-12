@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\CUESDK">
+      <UniqueIdentifier>{d781c1b6-b5fa-4eaf-806f-2fb94bff080c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -23,6 +26,18 @@
     </ClInclude>
     <ClInclude Include="CueTestFunctions.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CUESDK\include\CorsairKeyIdEnum.h">
+      <Filter>Header Files\CUESDK</Filter>
+    </ClInclude>
+    <ClInclude Include="CUESDK\include\CorsairLedIdEnum.h">
+      <Filter>Header Files\CUESDK</Filter>
+    </ClInclude>
+    <ClInclude Include="CUESDK\include\CUESDK.h">
+      <Filter>Header Files\CUESDK</Filter>
+    </ClInclude>
+    <ClInclude Include="CUESDK\include\CUESDKGlobal.h">
+      <Filter>Header Files\CUESDK</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -38,5 +53,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="CUESDK.x64_2015.dll" />
+    <None Include="..\README.md" />
+    <None Include="CUESDK\redist\x64\CUESDK.x64_2015.dll">
+      <Filter>Header Files\CUESDK</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="CUESDK\lib\x64\CUESDK.x64_2015.lib">
+      <Filter>Header Files\CUESDK</Filter>
+    </Library>
   </ItemGroup>
 </Project>
