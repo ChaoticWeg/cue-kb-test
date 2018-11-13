@@ -57,6 +57,9 @@
     <None Include="CUESDK\redist\x64\CUESDK.x64_2015.dll">
       <Filter>Header Files\CUESDK</Filter>
     </None>
+    <None Include="..\PostBuild.ps1">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Library Include="CUESDK\lib\x64\CUESDK.x64_2015.lib">

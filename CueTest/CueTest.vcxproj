@@ -118,6 +118,10 @@
       <AdditionalLibraryDirectories>$(ProjectDir)CUESDK\redist\x64;$(ProjectDir)CUESDK\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>$(ProjectDir)CUESDK\lib\x64\CUESDK.x64_2015.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>powershell.exe -executionpolicy bypass -file $(SolutionDir)PostBuild.ps1</Command>
+      <Message>Post-Build PS script</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -159,6 +163,10 @@
       <AdditionalLibraryDirectories>$(ProjectDir)CUESDK\redist\x64;$(ProjectDir)CUESDK\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>$(ProjectDir)CUESDK\lib\x64\CUESDK.x64_2015.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>powershell.exe -executionpolicy bypass -file $(SolutionDir)PostBuild.ps1</Command>
+      <Message>Post-Build PS script</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CUESDK\include\CorsairKeyIdEnum.h" />
@@ -180,6 +188,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\PostBuild.ps1" />
     <None Include="..\README.md" />
     <None Include="CUESDK.x64_2015.dll">
       <DeploymentContent>true</DeploymentContent>
